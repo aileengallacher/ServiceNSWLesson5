@@ -58,7 +58,10 @@ function countOccurences(stringToSearch, searchTerm) {
  let sentence1 = "The quick brown fox and dog jumps over the lazy dog.";
  //console.log(sentence1.substring(10,15));   // outputs char 10 to 14 from string 
 
- let input = "fox";
- let newSearch = sentence1.substring(input.length);
- console.log(newSearch)
+//  let input = "fox";    // play around with this to work
+//  let newSearch = sentence1.substring(input.length);
+//  console.log(newSearch)
+
+
+// Regular Expressions
 
