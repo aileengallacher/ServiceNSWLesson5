@@ -50,6 +50,37 @@ async function Program() {
         hot: true,
         ingredients: ["espresso", "steamed milk"]
     }
+    let userNameTest = await askQuestion("Please enter your name: ");
+    console.log();
+    console.log(`Welcome ${userNameTest}. Let's look at some drinks.`);
+    console.log();
+    console.log("There are a few types to choose from. Select an option below to see what is available:");
+    while (true) {
+        console.log("[1] Hot Drinks");     // need to do the lower case entry here is using letters
+        console.log("[2] Cold Drinks");
+        console.log("[0] Don't want to see drinks list. Continue with console app instead");
+        let userInput = await askQuestion("Please select an option:");
+        console.log();
+
+        if (userInput == "1") {
+            return true
+        }
+        console.log(`Drink1 hot value is ${drink1.hot}`)
+
+    }
+    //         // } else if (userInput == "0") {    // !! CANNOT USE A BREAK HERE !!
+    //         //     break;
+    //     }
+    // } else if (userInput === "0") {
+    //     return false;
+    // }
+    // let whatTemp = drink1.filter(findTemp);
+    // console.log(whatTemp);
+
+
+
+    console.log("THE ENDDDDD!");
+
 
     let userName = await askQuestion("Please enter your name: ");
     console.log();
@@ -135,7 +166,7 @@ async function Program() {
                 outputIngredients += hobby;
                 if (i == drink5.ingredients.length - 2) {
                     outputIngredients += " and ";
-                } else if (i == drink5.ingredients.length - 1) {
+                } else if (i == drink1.ingredients.length - 1) {
                     outputIngredients += ".";
                 } else {
                     outputIngredients += ", ";
@@ -151,6 +182,7 @@ async function Program() {
     }
     console.log(`Thank you, enjoy your drink ${userName}!`);
     console.log();
+    console.log("will this run to here?");
 }
 Program().then(() => {
     process.exit(0);
